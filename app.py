@@ -8,7 +8,6 @@ st.set_page_config(page_title="Online Retail Sales Analysis", page_icon="🛒", 
 st.title("🛒 Online Retail Sales Analysis & Forecasting")
 st.caption("BBIM709 Assessment 2 · live data from Databricks Unity Catalog · Dec 2010 – Dec 2011")
 
-@st.cache_resource(ttl=3600)
 def get_connection():
     return sql.connect(
         server_hostname=st.secrets["DATABRICKS_HOST"],
